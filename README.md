@@ -194,7 +194,7 @@ Repeat for each of the four scripts on each platform, three times per variant.
 | **GRPO Qwen2-7B** (TP=2, n=5) | baseline (AEC=1) | 3/3 | 3875.94, 3830.39, 3797.90 | 3830.39 | — |
 | | optimized (AEC=0) | **0/3** | (OOM all attempts) | **— OOM** | **N/A — unsafe** |
 | **GRPO DeepSeek-7B** (TP=2, n=5) | baseline (AEC=1) | 3/3 | 4011.73, 3977.42, 3947.43 | 3977.42 | — |
-| | optimized (AEC=0) | 2/3 | 4092.59, 4069.03 | **4080.81** | **+2.60%** |
+| | optimized (AEC=0) | 3/3 | 4092.59, 4079.77, 4069.03 | **4079.77** | **+2.57%** |
 
 ## NVIDIA B300 — automated platform, 3 runs per variant, median of successful runs
 
@@ -208,7 +208,6 @@ Repeat for each of the four scripts on each platform, three times per variant.
 | | optimized (AEC=0) | 2/3 | 3719.37, 3706.98 | **3713.18** | **+2.53%** |
 | **GRPO DeepSeek-7B** (TP=2, n=5) | baseline (AEC=1) | 1/3 | 4128.07 | 4128.07 | — |
 | | optimized (AEC=0) | 2/3 | 4177.31, 4099.13 | **4138.22** | **+0.25%** (small n) |
-
 
 
 ## Summary
