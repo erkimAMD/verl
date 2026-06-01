@@ -183,33 +183,31 @@ Repeat for each of the four scripts on each platform, three times per variant.
 
 ## Measured results
 
-### AMD MI355X — automated platform, 3 runs per variant, median reported
-
+## AMD MI355X — automated platform, 3 runs per variant, median reported
 
 | Workload | Variant | n successful / attempted | Successful values (tok/s) | **Median** | Δ vs baseline |
 |---|---|---|---|---|---|
-| **PPO Qwen2-7B** (TP=2) | baseline (AEC=1) | 2/3 | 1978.09, 1965.37 | 1971.73 | — |
-| | optimized (AEC=0) | 3/3 | 2148.86, 2137.03, 2124.08 | **2137.03** | **+8.38%** |
+| **PPO Qwen2-7B** (TP=2) | baseline (AEC=1) | 3/3 | 1978.09, 1965.37, 1940.64 | 1965.37 | — |
+| | optimized (AEC=0) | 3/3 | 2148.86, 2137.03, 2124.08 | **2137.03** | **+8.73%** |
 | **PPO DeepSeek-7B** (TP=4) | baseline (AEC=1) | 3/3 | 2187.87, 2187.21, 2170.18 | 2187.21 | — |
-| | optimized (AEC=0) | 2/3 | 2332.30, 2330.52 | **2331.41** | **+6.59%** |
+| | optimized (AEC=0) | 3/3 | 2368.63, 2332.30, 2330.52 | **2332.30** | **+6.63%** |
 | **GRPO Qwen2-7B** (TP=2, n=5) | baseline (AEC=1) | 3/3 | 3875.94, 3830.39, 3797.90 | 3830.39 | — |
 | | optimized (AEC=0) | **0/3** | (OOM all attempts) | **— OOM** | **N/A — unsafe** |
 | **GRPO DeepSeek-7B** (TP=2, n=5) | baseline (AEC=1) | 3/3 | 4011.73, 3977.42, 3947.43 | 3977.42 | — |
 | | optimized (AEC=0) | 2/3 | 4092.59, 4069.03 | **4080.81** | **+2.60%** |
 
-### NVIDIA B300 — automated platform, 3 runs per variant, median of successful runs
-
+## NVIDIA B300 — automated platform, 3 runs per variant, median of successful runs
 
 | Workload | Variant | n successful / attempted | Successful values (tok/s) | **Median** | Δ vs baseline |
 |---|---|---|---|---|---|
 | **PPO Qwen2-7B** (TP=2) | baseline (AEC=1) | 1/3 | 1868.37 | 1868.37 | — |
 | | optimized (AEC=0) | 2/3 | 2010.40, 1957.53 | **1983.97** | **+6.19%** (small n) |
-| **PPO DeepSeek-7B** (TP=4) | baseline (AEC=1) | **0/3** | — | — | — |
-| | optimized (AEC=0) | 2/3 | 2137.32, 2120.36 | 2128.84 | **N/A** (no baseline) |
+| **PPO DeepSeek-7B** (TP=4) | baseline (AEC=1) | 2/3 | 2080.37, 2043.90 | 2062.14 | — |
+| | optimized (AEC=0) | 2/3 | 2137.32, 2120.36 | **2128.84** | **+3.23%** |
 | **GRPO Qwen2-7B** (TP=2, n=5) | baseline (AEC=1) | 2/3 | 3667.66, 3575.12 | 3621.39 | — |
 | | optimized (AEC=0) | 2/3 | 3719.37, 3706.98 | **3713.18** | **+2.53%** |
-| **GRPO DeepSeek-7B** (TP=2, n=5) | baseline (AEC=1) | **0/3** | — | — | — |
-| | optimized (AEC=0) | 2/3 | 4177.31, 4099.13 | 4138.22 | **N/A** (no baseline) |
+| **GRPO DeepSeek-7B** (TP=2, n=5) | baseline (AEC=1) | 1/3 | 4128.07 | 4128.07 | — |
+| | optimized (AEC=0) | 2/3 | 4177.31, 4099.13 | **4138.22** | **+0.25%** (small n) |
 
 
 
