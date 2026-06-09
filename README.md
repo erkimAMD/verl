@@ -91,9 +91,6 @@ Both platforms use the same verl source tree (`https://github.com/ROCm/verl` `am
 ## Container setup
 
 ### AMD MI300X / MI355X
-
-The container is built from a custom multi-stage Dockerfile (`ubuntu:22.04` base → ROCm 7.0.2 → PyTorch ROCm wheels → Flash Attention source build → TransformerEngine source build → vLLM source build → verl editable install + AITER + mbridge/megatron-core).
-
 To run:
 ```bash
 docker run -it --device /dev/dri --device /dev/kfd -p 8265:8265 \
@@ -112,7 +109,7 @@ docker run --gpus all -it --network host --ipc host -v /data:/data \
     docker.gpuperf:5000/nvidia/verl:0.7.x-rocm /bin/bash
 ```
 
-Built on top of `verlai/verl:vllm020.dev1` (public vLLM image) with verl re-cloned:
+Built on top of `verlai/verl:vllm020.dev1` (public vLLM image) with verl re-cloned. Build:
 
 ```bash
 # inside the container
